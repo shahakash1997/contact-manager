@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Manager App</title>
+   
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#" class="">
+          <img src="./images/1804890.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          Contacts Manager Application
+        </a>
+      </nav>
+
+    <div id="main">
+            <div id="main_div1">
+                    <form id="form_div" onsubmit="submitForm()">
+
+                        
+                            <div class="form-group">
+                                    <input type="text" class="form-control" id="cname"  placeholder="Enter Name" maxlength="50" required>
+                            </div>
+
+                            <div class="form-group">
+                              <input type="email" class="form-control" id="email"  placeholder="Enter email" required>
+                            </div>
+
+                            <div class="form-group">
+                                    <select class="form-control" id="country_select">
+                                      <option>Select Country</option>
+                                     
+                                    </select>
+                            </div>
+
+                            
+
+                            <div class="form-group">
+                                    
+                                    <input type="text" class="form-control" id="phone"  placeholder="Enter phone Number" maxlength="13" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                            <button type="button" class="btn btn-primary" onclick="resetButton()">Reset</button>
+                            <small id="warning_text"></small>
+                   
+                    </form>
+                   
+            </div>
+            <div id="main_div2">
+
+                <h3>Listing of contacts</h3>
+            </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+    
+</body>
+</html>

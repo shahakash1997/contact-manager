@@ -1,0 +1,36 @@
+body{
+    padding: 0px;
+    margin: 0;
+    
+    
+}
+#main_div1
+{
+    padding: 20px;
+    border: 2px solid green;
+    width: 50%;
+    
+   
+    
+}
+#main
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+#main_div2
+{
+    padding: 20px;
+    border: 2px solid green;
+    width: 50%;
+   
+
+}
+
+#warning_text
+{
+    color: red;
+}
