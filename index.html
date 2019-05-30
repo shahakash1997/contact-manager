@@ -19,6 +19,14 @@
       </nav>
 
     <div id="main">
+                <div id="main_div2">
+                                <button type="button" class="btn btn-primary" onclick="addContact()">Add</button>
+                                <button type="button" class="btn btn-primary" onclick="deleteContact()">Delete</button>
+                                <button type="button" class="btn btn-primary" onclick="modifyContact()">Modify</button>   
+                                <button type="button" class="btn btn-primary" onclick="listAll()">List All</button>
+                                <button type="button" class="btn btn-primary" onclick="searchContact()">Search</button>
+                </div>
+                
             <div id="main_div1">
                     <form id="form_div" onsubmit="submitForm()">
 
@@ -48,14 +56,12 @@
                             <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                             <button type="button" class="btn btn-primary" onclick="resetButton()">Reset</button>
                             <small id="warning_text"></small>
+                            <small id="green_text"></small>
                    
                     </form>
                    
             </div>
-            <div id="main_div2">
-
-                <h3>Listing of contacts</h3>
-            </div>
+         
 
 
     </div>

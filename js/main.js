@@ -6,16 +6,10 @@ class contact
         this.name=name;
         this.country=country;
         this.email=email;
-        this.phone=phone;
     }
     
 }
 
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || {READ_WRITE: "readwrite"}; 
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-
-var contacts=[];
 
 
 $(document).ready(()=>
@@ -100,13 +94,60 @@ $('#submit').click(function(e){
     }
     else
     {
+
+    var ckeys=Object.keys(localStorage);
+    console.log(ckeys);
+    
+    if(ckeys.indexOf(cname.val())==-1)
+    {
     var con=new contact(cname.val(),email.val(),country.val(),phone.val());
-    contacts.push(con);
-    console.log(contacts);
+    localStorage.setItem(cname.val(),JSON.stringify(con));
+    wtext.text('');
+    $('#green_text').text('Contact Saved ..');
+
+    console.log('Contact saved '+con);
+    
+    }
+    else
+    {
+        wtext.text('Error : Contact Already Exists !');
+        
+    }
+    
+    
     }
     
 
-    console.log('submitted');
+    
     
 });
 
+
+function addContact()
+{
+    var divi=$('#form_div');
+    divi.show();
+
+}
+
+function modifyContact()
+{
+
+}
+
+function deleteContact()
+{
+
+}
+function listAll()
+{
+
+}
+function searchContact()
+{
+    var divi=$('#form_div');
+    divi.hide();
+
+
+
+}
